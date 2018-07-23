@@ -16,7 +16,7 @@ logger_name_pattern = "(?:INFO|WARN|ERROR|DEBUG):(.+?)(?=:)"
 
 filter_pattern = re.compile('[\W_]+', re.UNICODE)
 
-highlight_group = "LogsHighlighter_highlight"
+highlight_group = "loguils_highlight"
 
 colors = { }
 
