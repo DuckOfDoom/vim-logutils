@@ -70,6 +70,8 @@ def _highlight():
         vim.command("syntax match {group} /{pattern}/".format(group=group, pattern=line_pattern))
         vim.command("highlight {group} guifg = {color}".format(group=group, color=color))
 
+    colors.clear()
+
 def highlight_with_settings():
     _load_config_from_file()
     _highlight()
