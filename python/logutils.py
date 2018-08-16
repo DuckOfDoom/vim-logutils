@@ -46,7 +46,8 @@ def _load_config_from_file():
         for line in lines:
             if not line.startswith("//"):
                 split = line.split(" ");
-                colors[split[0]] = split[1]
+                if len(split) == 2:
+                    colors[split[0]] = split[1]
 
     except IOError: 
         print("Error: Can't find file: '{p}'".format(p=config_path))
