@@ -22,7 +22,7 @@ Plugin has three options for highlighting:
    Open config file with `<leader>ho` ("Highlighter Open config")
    
 2. Make configuration on the fly from the current buffer.
-   This parses the whole file and assigns a random (will make it configurable if needed)
+   This parses the whole file and assigns a random greenish color
    
    Call it with `<leader>ha` ("Highlight automatically")
    
