@@ -48,7 +48,7 @@ def _load_config_from_file():
         lines = f.read().splitlines()
         for line in lines:
             split = line.split(" ");
-            colors[_filter_group(split[0])] = split[1]
+            colors[split[0]] = split[1]
 
     except IOError: 
         print("Error: Can't find file: '{p}'".format(p=config_path))
