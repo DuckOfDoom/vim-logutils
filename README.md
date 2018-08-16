@@ -19,6 +19,7 @@ Plugin has three options for highlighting:
      ```
      
    Call it with `<leader>hs` ("Highlight with settings")
+   Open config file with `<leader>ho` ("Highlighter Open config")
    
 2. Make configuration on the fly from the current buffer.
    This parses the whole file and assigns a random (will make it configurable if needed)
@@ -31,3 +32,4 @@ Plugin has three options for highlighting:
    
 
 To clear highlighting, use `<leader>hc` ("Highlight clear")
+
