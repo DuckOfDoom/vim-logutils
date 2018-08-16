@@ -5,9 +5,6 @@ import sys
 import re
 import random
 
-logger_prefixes = [ "WARN:", "INFO:", "ERROR:", "DEBUG:" ]
-logger_pattern = re.compile('WARN:/INFO:/ERROR:', re.UNICODE)
-
 # matches the whole line with logger in it (vim-style)
 logger_line_pattern = "\(INFO\|WARN\|ERROR\|DEBUG\):{logger}:.*"
 
@@ -47,8 +44,9 @@ def _load_config_from_file():
         f = open(config_path)
         lines = f.read().splitlines()
         for line in lines:
-            split = line.split(" ");
-            colors[split[0]] = split[1]
+            if not line.startswith("//"):
+                split = line.split(" ");
+                colors[split[0]] = split[1]
 
     except IOError: 
         print("Error: Can't find file: '{p}'".format(p=config_path))
