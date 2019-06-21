@@ -26,7 +26,7 @@ def _gen_random_color():
     b = (random.randint(100,255) + base_color[2]) / 2
 
     def format_color(c):
-        c = str(hex(c)).replace("0x", "")
+        c = str(hex(int(c))).replace("0x", "")
         if len(c) == 1:
             c = "0" + c
         return c
@@ -63,7 +63,7 @@ def _make_config_from_buffer():
 
 def _highlight():
     clear()
-    for logger, color in colors.iteritems():
+    for logger, color in colors.items():
         group = _filter_group(highlight_group + logger)
         line_pattern = logger_line_pattern.format(logger=logger)
         vim.command("syntax match {group} /{pattern}/".format(group=group, pattern=line_pattern))
