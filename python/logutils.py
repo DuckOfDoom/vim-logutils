@@ -19,11 +19,11 @@ colors = { }
 
 def _gen_random_color():
     # average colors with this one colors 
-    base_color = [0, 255, 0]
+    base_color = [255, 255, 255]
 
-    r = (random.randint(100,255) + base_color[0]) / 2
-    g = (random.randint(100,255) + base_color[1]) / 2
-    b = (random.randint(100,255) + base_color[2]) / 2
+    r = (random.randint(0,255) + base_color[0]) / 2 
+    g = (random.randint(0,255) + base_color[1]) / 2
+    b = (random.randint(0,255) + base_color[2]) / 2
 
     def format_color(c):
         c = str(hex(int(c))).replace("0x", "")
